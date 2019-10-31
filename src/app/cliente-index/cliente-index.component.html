@@ -1,0 +1,29 @@
+<div class="">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">F E especialidad</th>
+          <th scope="col">Fecha de Ingreso</th>
+          <th scope="col">Fecha de Egreso</th>
+          <th scope="col">Editar</th>
+          <th scope="col">borrar</th>
+        </tr>
+      </thead>
+        <tbody  *ngFor="let d of list">
+          <tr >
+          <th scope="row">{{ d.id }}</th>
+          <td>{{ d.nombre }}</td>
+          <td>{{ d.apellido }}</td>
+          <td>{{ d.telefono }}</td>
+          <td>{{ d.direccion }}</td>
+          <td><span><button type="button" class="btn btn-primary" routerLink="/clienteform/{{ d.id }}" routerLinkActive="active">Editar </button></span></td>
+          <td><span><button type="button" class="btn btn-dark" (click)="delete(d.id)">Borrar</button></span></td>
+          
+          
+        </tr>
+      </tbody>
+   
+    </table>
+  </div>

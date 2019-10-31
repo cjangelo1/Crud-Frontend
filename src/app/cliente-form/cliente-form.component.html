@@ -1,0 +1,40 @@
+<br>
+<div class="container">
+        <form [formGroup]="clienteForm" (ngSubmit)="save()">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="exampleInputEmail1">Nombre y apellido:</label>
+                      <input  type="text" formControlName="nombre" name="nombre" id="nombre" required placeholder="Nombre y Apellido" class="form-control"  aria-describedby="emailHelp" >
+                    </div>
+                    <div class="col-6">
+                        <label for="exampleInputEmail1">Año de ingreso</label>
+                      <input type="text" formControlName="apellido" name="apellido" id="apellido" required placeholder="Año de Ingreso" class="form-control"  aria-describedby="emailHelp" >
+                    </div>
+                    <div class="col-6">
+                        <label for="exampleInputEmail1">Año de egreso</label>
+                      <input  type="text" formControlName="telefono" name="telefono" id="telefono" required placeholder="Año de Egreso"required  class="form-control"  aria-describedby="emailHelp" >
+                    </div>
+                    <div class="col-6">
+                        <label for="exampleInputEmail1">Especialidad</label>
+                      <input type="text" formControlName="direccion" name="direccion" id="direccion" required placeholder="Especialidad" required  class="form-control"  aria-describedby="emailHelp" >
+                    </div>
+                    <div class="col-6">
+                        <label for="exampleInputEmail1">Año Egreso Especialidad</label>
+                      <input  required type="text" formControlName="direccion" name="direccion" id="direccion" required placeholder="Año egreso Especialidad" class="form-control"  aria-describedby="emailHelp" >
+                    </div>
+                  </div>
+            </div>
+                <br>
+                <button type="submit" [disabled]="!clienteForm.valid" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                        Save
+                      </button>
+            </form> 
+</div>
+
+      
+    
+
+        
+          
+      
